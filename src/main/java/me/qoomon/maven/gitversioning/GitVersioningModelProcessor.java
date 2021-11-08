@@ -341,6 +341,10 @@ public class GitVersioningModelProcessor extends DefaultModelProcessor {
                 String gitVersion = getGitVersion(versionFormat, parentGAV);
                 logger.debug("set parent version to " + gitVersion + " (" + parentGAV + ")");
                 parent.setVersion(gitVersion);
+            } else {
+                String gitVersion = getGitVersion(versionFormat, parentGAV);
+                logger.debug("xn:: set parent version to " + gitVersion + " (" + parentGAV + ")");
+                parent.setVersion(gitVersion);
             }
         }
     }
